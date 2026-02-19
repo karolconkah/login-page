@@ -2,6 +2,8 @@
   title="Login into your account"
   primaryBtnText="Login Now"
   secondaryBtnText="Signup Now"
+  (submit)="submit()"
+  (navigate)="navigate()"
 >
   <form [formGroup]="loginForm">
 
@@ -23,7 +25,7 @@
   >
     <img src="/assets/svg/password-icon.svg" />
   </app-primary-input>
-
+<span>Forgot password?</span>
   </form>
 </app-default-login-layout>
 
