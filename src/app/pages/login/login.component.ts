@@ -4,6 +4,8 @@ import { FormControl, FormGroup, FormRecord, ReactiveFormsModule, Validators } f
 import { PrimaryInputComponent } from '../../components/primary-input/primary-input.component';
 import { Router } from '@angular/router';
 import { LoginService } from '../../services/login.service';
+import { ToastrService } from 'ngx-toastr';
+
 
 interface LoginForm {
   email: FormControl,
@@ -28,29 +30,31 @@ export class LoginComponent {
 
  constructor(
   private router: Router,
-   private loginService: LoginService
+   private loginService: LoginService,
+   private toastService: ToastrService
  ) {
-  this.loginForm = new FormGroup({
-    email: new FormControl('', [
-      Validators.required,
-      Validators.email
-    ]),
-    password: new FormControl('', [
-      Validators.required,
-      Validators.minLength(6)
-    ])
-  })
-}
-
-  submit() {
-    this.loginService.login(this.loginForm.value.email, this.loginForm.value.password).subscribe({
-      next: () => console.log("sucesso!"),
-      error: () => console.log("error")})
+    this.loginForm = new FormGroup<LoginForm>({
+      email: new FormControl('', {
+        nonNullable: true,
+        validators: [Validators.required, Validators.email],
+      }),
+      password: new FormControl('', {
+        nonNullable: true,
+        validators: [Validators.required, Validators.minLength(6)],
+      }),
+    });
   }
 
-navigate() {
-      this.router.navigate(["signup"])
+  submit(): void {
+    const { email, password } = this.loginForm.getRawValue();
+
+    this.loginService.login(email, password).subscribe({
+      next: () => this.toastService.success('Login feito com sucesso!'),
+      error: () => this.toastService.error('Erro inesperado! Tente novamente mais tarde'),
+    });
   }
 
+  navigate(): void {
+    this.router.navigate(['signup']);
+  }
 }
-
