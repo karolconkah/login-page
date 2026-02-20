@@ -55,7 +55,7 @@ http://localhost:4200
 
 Próximos passos
 
-Este projeto será integrado futuramente a um backend desenvolvido em Java com Spring Boot.
+Este projeto foi integrado a um backend disponível como backend-login-page desenvolvido em Java com Spring Boot.
 
 Autora
 
