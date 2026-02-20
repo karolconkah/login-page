@@ -1,12 +1,12 @@
-Login Page - Angular 17
+Login e Cadastro - Angular 17
 
 Sobre o projeto
 
-Aplicação de autenticação desenvolvida com Angular 17 utilizando componentes standalone e Reactive Forms.
+Aplicação frontend desenvolvida com Angular 17 utilizando componentes standalone e Reactive Forms.
 
-O projeto implementa uma tela de login com validação de formulário e integração com serviço de autenticação, sendo preparado para consumo de uma API REST.
+O projeto implementa telas de login e cadastro com validação de formulário e organização modular, com foco em boas práticas do Angular moderno.
 
-Desenvolvido para prática de conceitos modernos do Angular e organização de código em frontend.
+Desenvolvido para prática de estruturação de aplicações frontend e organização de código.
 
 Tecnologias utilizadas
 
@@ -24,50 +24,38 @@ npm
 
 Funcionalidades
 
-Formulário de login com validação
+Tela de login
 
-Campo obrigatório
+Tela de cadastro
+
+Validação de campos obrigatórios
 
 Validação de e-mail
 
 Estrutura modular com componentes reutilizáveis
 
-Integração com serviço de login
-
-Tratamento de erros
-
-Organização seguindo boas práticas do Angular moderno
-
-Estrutura do projeto
-
-components/ → Componentes reutilizáveis
-
-pages/ → Páginas da aplicação
-
-services/ → Comunicação com API
-
-layouts/ → Layout padrão
+Organização por layout e páginas
 
 Como rodar o projeto
 Pré-requisitos
 
 Node.js instalado
 
-Angular CLI instalada globalmente
+Angular CLI instalada
 
 npm install -g @angular/cli
-1. Instalar dependências
+Instalar dependências
 npm install
-2. Rodar aplicação
+Rodar aplicação
 ng serve
 
 Aplicação disponível em:
 
 http://localhost:4200
 
-Objetivo
+Próximos passos
 
-Praticar desenvolvimento frontend com Angular 17, formulários reativos e integração com backend.
+Este projeto será integrado futuramente a um backend desenvolvido em Java com Spring Boot.
 
 Autora
 
