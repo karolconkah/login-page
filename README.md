@@ -1,27 +1,74 @@
-# LoginPage
+Login Page - Angular 17
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.17.
+Sobre o projeto
 
-## Development server
+Aplicação de autenticação desenvolvida com Angular 17 utilizando componentes standalone e Reactive Forms.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+O projeto implementa uma tela de login com validação de formulário e integração com serviço de autenticação, sendo preparado para consumo de uma API REST.
 
-## Code scaffolding
+Desenvolvido para prática de conceitos modernos do Angular e organização de código em frontend.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Tecnologias utilizadas
 
-## Build
+Angular 17
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+TypeScript
 
-## Running unit tests
+Reactive Forms
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Angular Router
 
-## Running end-to-end tests
+Standalone Components
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+npm
 
-## Further help
+Funcionalidades
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Formulário de login com validação
+
+Campo obrigatório
+
+Validação de e-mail
+
+Estrutura modular com componentes reutilizáveis
+
+Integração com serviço de login
+
+Tratamento de erros
+
+Organização seguindo boas práticas do Angular moderno
+
+Estrutura do projeto
+
+components/ → Componentes reutilizáveis
+
+pages/ → Páginas da aplicação
+
+services/ → Comunicação com API
+
+layouts/ → Layout padrão
+
+Como rodar o projeto
+Pré-requisitos
+
+Node.js instalado
+
+Angular CLI instalada globalmente
+
+npm install -g @angular/cli
+1. Instalar dependências
+npm install
+2. Rodar aplicação
+ng serve
+
+Aplicação disponível em:
+
+http://localhost:4200
+
+Objetivo
+
+Praticar desenvolvimento frontend com Angular 17, formulários reativos e integração com backend.
+
+Autora
+
+Karoline Vieira Neves
