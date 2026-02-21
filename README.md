@@ -53,8 +53,6 @@ Aplicação disponível em:
 
 http://localhost:4200
 
-Próximos passos
-
 Este projeto foi integrado a um backend disponível como backend-login-page desenvolvido em Java com Spring Boot.
 
 Autora
