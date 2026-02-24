@@ -9,7 +9,10 @@ import { Observable, tap } from 'rxjs';
 })
 export class LoginService {
 
- apiUrl: string = "http://localhost:8080/auth"
+ apiUrl: string =
+  window.location.hostname === 'localhost'
+    ? 'http://localhost:8080/auth'
+    : 'https://backend-login-page-abnx.onrender.com/auth';
 
   constructor(private httpClient: HttpClient) { }
    login(email: string, password: string): Observable<LoginResponse>{
