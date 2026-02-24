@@ -5,6 +5,9 @@ import { UserComponent } from './pages/user/user.component';
 import { AuthGuardService } from './services/auth-guard.service';
 
 export const routes: Routes = [
+
+  { path: '', redirectTo: 'login', pathMatch: 'full' },
+
   {
       path: "login",
         component: LoginComponent
