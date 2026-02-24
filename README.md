@@ -1,72 +1,14 @@
-Login e Cadastro - Angular 17
+Login Page Frontend
 
-Sobre o projeto
+Aplicação frontend desenvolvida em Angular responsável pela interface de autenticação, consumo da API REST e controle de rotas protegidas.
 
-Aplicação frontend desenvolvida com Angular 17 utilizando componentes standalone e Reactive Forms.
-
-O projeto implementa telas de login e cadastro com validação de formulário e organização modular, com foco em boas práticas do Angular moderno.
-
-Desenvolvido para prática de estruturação de aplicações frontend e organização de código.
-
-Tecnologias utilizadas
-
-Angular 17
-
-TypeScript
-
-Reactive Forms
-
-Angular Router
-
-Standalone Components
-
-npm
-
-Funcionalidades
-
-Tela de login
-
-Tela de cadastro
-
-Validação de campos obrigatórios
-
-Validação de e-mail
-
-Estrutura modular com componentes reutilizáveis
-
-Organização por layout e páginas
-
-Como rodar o projeto
-Pré-requisitos
-
-Node.js instalado
-
-Angular CLI instalada
-
-npm install -g @angular/cli
-Instalar dependências
-npm install
-Rodar aplicação
-ng serve
-
-Aplicação disponível em:
-
-http://localhost:4200
-
-Este projeto foi integrado a um backend disponível como backend-login-page desenvolvido em Java com Spring Boot.
-
-Em produção 
-
-Aplicação fullstack de autenticação desenvolvida com Angular no frontend, Spring Boot no backend e PostgreSQL (Supabase) como banco de dados.
-Deploy realizado com Vercel (frontend) e Render (backend).
-
-Deploy
-
-Frontend:
+Deploy em produção:
 https://login-page-gold-three.vercel.app
 
-Backend:
-https://backend-login-page-abnx.onrender.com
+Descrição
+
+Interface de cadastro e login integrada a uma API Spring Boot.
+Após autenticação, o usuário é redirecionado para uma rota protegida (/user), controlada por AuthGuard.
 
 Funcionalidades
 
@@ -74,15 +16,17 @@ Cadastro de usuário
 
 Login com autenticação JWT
 
-Proteção de rota (/user) com AuthGuard
+Proteção de rota (/user)
 
-Persistência de sessão
+Persistência de sessão via sessionStorage
 
-Tecnologias
+Redirecionamento automático após autenticação
 
-Frontend
+Tecnologias Utilizadas
 
 Angular
+
+TypeScript
 
 Reactive Forms
 
@@ -92,10 +36,24 @@ Auth Guard
 
 HttpClient
 
-Autenticação
+Integração com Backend
 
-O token JWT é armazenado no sessionStorage e validado pelo AuthGuard para controle de acesso às rotas protegidas.
+O frontend consome a API hospedada no Render:
 
-Autora
+https://backend-login-page-abnx.onrender.com
 
-Karoline Vieira Neves
+O token JWT retornado no login é armazenado no sessionStorage e utilizado para controle de acesso às rotas protegidas.
+
+Como rodar localmente
+
+Instalar dependências:
+
+npm install
+
+Executar a aplicação:
+
+ng serve
+
+Acessar:
+
+http://localhost:4200
