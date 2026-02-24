@@ -43,15 +43,27 @@ export class SignUpComponent {
     })
   }
 
-  submit(){
-     console.log('SUBMIT DISPAROU', this.signupForm.value);
-       this.loginService.signup(this.signupForm.value.name, this.signupForm.value.email, this.signupForm.value.password).subscribe({
-      next: () => this.toastService.success("Login feito com sucesso!"),
-      error: () => this.toastService.error("Erro inesperado! Tente novamente mais tarde")
-    })
-  }
+  submit() {
+  console.log('SUBMIT DISPAROU', this.signupForm.value);
 
-  navigate(){
-    this.router.navigate(["login"])
-  }
+  this.loginService
+    .signup(
+      this.signupForm.value.name,
+      this.signupForm.value.email,
+      this.signupForm.value.password
+    )
+    .subscribe({
+      next: () => {
+        this.toastService.success('Cadastro realizado com sucesso!');
+        this.router.navigate(['/login']);
+      },
+      error: () => {
+        this.toastService.error('Erro inesperado! Tente novamente mais tarde');
+      }
+    });
+}
+
+ navigate() {
+  this.router.navigate(['/login']);
+}
 }
