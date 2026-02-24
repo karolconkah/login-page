@@ -55,6 +55,47 @@ http://localhost:4200
 
 Este projeto foi integrado a um backend disponível como backend-login-page desenvolvido em Java com Spring Boot.
 
+Em produção 
+
+Aplicação fullstack de autenticação desenvolvida com Angular no frontend, Spring Boot no backend e PostgreSQL (Supabase) como banco de dados.
+Deploy realizado com Vercel (frontend) e Render (backend).
+
+Deploy
+
+Frontend:
+https://login-page-gold-three.vercel.app
+
+Backend:
+https://backend-login-page-abnx.onrender.com
+
+Funcionalidades
+
+Cadastro de usuário
+
+Login com autenticação JWT
+
+Proteção de rota (/user) com AuthGuard
+
+Persistência de sessão
+
+Tecnologias
+
+Frontend
+
+Angular
+
+Reactive Forms
+
+Angular Router
+
+Auth Guard
+
+HttpClient
+
+Autenticação
+
+O token JWT é armazenado no sessionStorage e validado pelo AuthGuard para controle de acesso às rotas protegidas.
+
 Autora
 
 Karoline Vieira Neves
