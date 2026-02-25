@@ -1,16 +1,30 @@
-Login e Cadastro - Angular 17
+Login Page Frontend
 
-Sobre o projeto
+Aplicação frontend desenvolvida em Angular responsável pela interface de autenticação, consumo da API REST e controle de rotas protegidas.
 
-Aplicação frontend desenvolvida com Angular 17 utilizando componentes standalone e Reactive Forms.
+Deploy em produção:
+https://login-page-gold-three.vercel.app
 
-O projeto implementa telas de login e cadastro com validação de formulário e organização modular, com foco em boas práticas do Angular moderno.
+Descrição
 
-Desenvolvido para prática de estruturação de aplicações frontend e organização de código.
+Interface de cadastro e login integrada a uma API Spring Boot.
+Após autenticação, o usuário é redirecionado para uma rota protegida (/user), controlada por AuthGuard.
 
-Tecnologias utilizadas
+Funcionalidades
 
-Angular 17
+Cadastro de usuário
+
+Login com autenticação JWT
+
+Proteção de rota (/user)
+
+Persistência de sessão via sessionStorage
+
+Redirecionamento automático após autenticação
+
+Tecnologias Utilizadas
+
+Angular
 
 TypeScript
 
@@ -18,43 +32,28 @@ Reactive Forms
 
 Angular Router
 
-Standalone Components
+Auth Guard
 
-npm
+HttpClient
 
-Funcionalidades
+Integração com Backend
 
-Tela de login
+O frontend consome a API hospedada no Render:
 
-Tela de cadastro
+https://backend-login-page-abnx.onrender.com
 
-Validação de campos obrigatórios
+O token JWT retornado no login é armazenado no sessionStorage e utilizado para controle de acesso às rotas protegidas.
 
-Validação de e-mail
+Como rodar localmente
 
-Estrutura modular com componentes reutilizáveis
+Instalar dependências:
 
-Organização por layout e páginas
-
-Como rodar o projeto
-Pré-requisitos
-
-Node.js instalado
-
-Angular CLI instalada
-
-npm install -g @angular/cli
-Instalar dependências
 npm install
-Rodar aplicação
+
+Executar a aplicação:
+
 ng serve
 
-Aplicação disponível em:
+Acessar:
 
 http://localhost:4200
-
-Este projeto foi integrado a um backend disponível como backend-login-page desenvolvido em Java com Spring Boot.
-
-Autora
-
-Karoline Vieira Neves
