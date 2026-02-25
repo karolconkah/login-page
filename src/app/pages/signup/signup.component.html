@@ -4,7 +4,7 @@
     secondaryBtnText="Login Now"
     (submit)="submit()"
     (navigate)="navigate()"
-    [disablePrimaryBtn]="false"
+    [disablePrimaryBtn]="!signupForm.valid"
 >
     <form [formGroup]="signupForm" (ngSubmit)="submit()">
         <app-primary-input

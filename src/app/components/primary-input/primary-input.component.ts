@@ -25,27 +25,34 @@ export class PrimaryInputComponent implements ControlValueAccessor {
 @Input() inputName: string = "";
 
 value: string = '';
+disabled = false;
 
-onChange: any = () => {};
-onTouched: any = () => {};
+  onChange: (value: string) => void = () => {};
+  onTouched: () => void = () => {};
 
-onInput(event: Event) {
-  const value = (event.target as HTMLInputElement).value;
-  this.onChange(value);
-}
+  onInput(event: Event) {
+    const value = (event.target as HTMLInputElement).value;
+    this.value = value;       // ✅ mantém o valor sincronizado
+    this.onChange(value);     // ✅ atualiza o FormControl
+  }
 
-writeValue(value: any): void {
-  this.value = value;
-}
+  onBlur() {
+    this.onTouched();         // ✅ marca como “tocado”
+  }
 
-registerOnChange(fn: any): void {
-  this.onChange = fn;
-}
+  writeValue(value: any): void {
+    this.value = value ?? '';
+  }
 
-registerOnTouched(fn: any): void {
-  this.onTouched = fn;
-}
+  registerOnChange(fn: any): void {
+    this.onChange = fn;
+  }
 
-setDisabledState(isDisabled: boolean): void {}
+  registerOnTouched(fn: any): void {
+    this.onTouched = fn;
+  }
 
+  setDisabledState(isDisabled: boolean): void {
+    this.disabled = isDisabled; // ✅ respeita disabled do form
+  }
 }
