@@ -32,12 +32,12 @@ disabled = false;
 
   onInput(event: Event) {
     const value = (event.target as HTMLInputElement).value;
-    this.value = value;       // ✅ mantém o valor sincronizado
-    this.onChange(value);     // ✅ atualiza o FormControl
+    this.value = value;
+    this.onChange(value);
   }
 
   onBlur() {
-    this.onTouched();         // ✅ marca como “tocado”
+    this.onTouched();
   }
 
   writeValue(value: any): void {
@@ -53,6 +53,6 @@ disabled = false;
   }
 
   setDisabledState(isDisabled: boolean): void {
-    this.disabled = isDisabled; // ✅ respeita disabled do form
+    this.disabled = isDisabled;
   }
 }
